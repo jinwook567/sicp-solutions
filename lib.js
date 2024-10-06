@@ -39,3 +39,15 @@ export function list(...args) {
   const [first, ...rest] = args;
   return args.length === 0 ? null : pair(first, list(rest));
 }
+
+export function every(predicate, items) {
+  return is_null(items)
+    ? true
+    : predicate(head(items))
+    ? every(predicate, tail(items))
+    : false;
+}
+
+export function error(...args) {
+  throw new Error(JSON.stringify(args));
+}
