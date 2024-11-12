@@ -20,7 +20,12 @@ import {
   literal_value,
   is_name,
 } from "./sec-4.1.2.js";
-import { is_sequence, is_block, make_function } from "./sec-4.1.3.js";
+import {
+  is_sequence,
+  is_block,
+  make_function,
+  block_body,
+} from "./sec-4.1.3.js";
 
 export function evaluate(component, env) {
   return is_literal(component)
