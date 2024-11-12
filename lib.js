@@ -51,3 +51,26 @@ export function every(predicate, items) {
 export function error(...args) {
   throw new Error(JSON.stringify(args));
 }
+
+export function list_ref(list, n) {
+  return n === 0 ? head(list) : list_ref(tail(list), n - 1);
+}
+
+export function length(list) {
+  return is_null(list) ? 0 : 1 + length(tail(list));
+}
+
+export function set_head(list, value) {
+  return pair(value, tail(list));
+}
+
+export function display(tree) {
+  function stringify(tree) {
+    return is_null(tree)
+      ? "null"
+      : is_pair(tree)
+      ? `(${stringify(head(tree))}, ${stringify(tail(tree))})`
+      : `${tree}`;
+  }
+  console.log(stringify(tree));
+}
