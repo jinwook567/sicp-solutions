@@ -25,7 +25,7 @@ function setup_environment() {
 
 const the_global_envioroment = setup_environment();
 
-function is_primitive_function(fun) {
+export function is_primitive_function(fun) {
   return is_tagged_list(fun, "primitive");
 }
 
@@ -57,7 +57,7 @@ const primitive_constant_values = map(
   primitive_constants
 );
 
-function apply_primitive_function(fun, arglist) {
+export function apply_primitive_function(fun, arglist) {
   return apply_in_underlying_javascript(primitive_implementation(fun), arglist);
 }
 

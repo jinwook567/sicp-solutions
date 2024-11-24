@@ -62,7 +62,7 @@ export function evaluate(component, env) {
     : error(component, "unknown syntax --evalute");
 }
 
-function apply(fun, args) {
+export function apply(fun, args) {
   if (is_primitive_function(fun)) {
     apply_primitive_function(fun, args);
   } else if (is_compound_function(fun)) {
@@ -80,7 +80,7 @@ function apply(fun, args) {
   }
 }
 
-function list_of_values(exps, env) {
+export function list_of_values(exps, env) {
   return map((arg) => evaluate(arg, env), exps);
 }
 
