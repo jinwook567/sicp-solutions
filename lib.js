@@ -64,6 +64,10 @@ export function set_head(list, value) {
   return pair(value, tail(list));
 }
 
+export function set_tail(list, value) {
+  return pair(head(list), value);
+}
+
 export function display(tree) {
   function stringify(tree) {
     return is_null(tree)
