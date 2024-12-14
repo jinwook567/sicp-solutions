@@ -125,6 +125,10 @@ export function frame_values(frame) {
 
 export const the_empty_environment = null;
 
+export function make_block(body) {
+  return list("block", body);
+}
+
 export function is_block(component) {
   return is_tagged_list(component, "block");
 }
