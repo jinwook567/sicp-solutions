@@ -64,7 +64,7 @@ export function evaluate(component, env) {
 
 export function apply(fun, args) {
   if (is_primitive_function(fun)) {
-    apply_primitive_function(fun, args);
+    return apply_primitive_function(fun, args);
   } else if (is_compound_function(fun)) {
     const result = evaluate(
       function_body(fun),
