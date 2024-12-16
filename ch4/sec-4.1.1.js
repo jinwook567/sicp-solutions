@@ -25,6 +25,9 @@ import {
   is_block,
   make_function,
   block_body,
+  make_return_value,
+  is_return_value,
+  return_value_content,
 } from "./sec-4.1.3.js";
 
 export function evaluate(component, env) {
