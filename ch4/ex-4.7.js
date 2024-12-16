@@ -36,3 +36,10 @@ function while_to_application(component) {
     list(predicate, block)
   );
 }
+
+// d
+/**
+ * while_loop는 원시함수로 평가된다.
+ * job 함수 본문의 평가가 반환문으로 종료되었는지, 끝까지 마쳤는지 알 수가 없다. while_loop의 job 함수를 평가기를 활용해서 평가하는 방식밖에 없다.
+ * 근데 위 방식은 파생된 구성요소라고 볼 수 없다.
+ */
