@@ -61,11 +61,13 @@ export function length(list) {
 }
 
 export function set_head(list, value) {
-  return pair(value, tail(list));
+  list = pair(value, tail(list));
+  return list;
 }
 
 export function set_tail(list, value) {
-  return pair(head(list), value);
+  list = pair(head(list), value);
+  return list;
 }
 
 export function display(tree) {
