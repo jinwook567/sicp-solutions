@@ -4,7 +4,7 @@ import {
   lamda_body,
   is_lamda_expression,
 } from "./sec-4.1.2";
-import { scan_out_declaration } from "./sec-4.1.1";
+import { scan_out_declarations } from "./sec-4.1.1";
 
 // a
 function are_parameters_unique(parameters) {
@@ -42,7 +42,7 @@ function verify_lamda_expression(component) {
   return are_parameters_unique(
     append(
       lamda_parameter_symbols(component),
-      scan_out_declaration(lamda_body(component))
+      scan_out_declarations(lamda_body(component))
     )
   );
 }

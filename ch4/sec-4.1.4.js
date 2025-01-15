@@ -13,7 +13,7 @@ import {
 } from "../lib";
 import { extend_environment } from "./sec-4.1.3";
 import { is_tagged_list } from "./sec-4.1.2";
-import { scan_out_declaration, evaluate } from "./sec-4.1.1";
+import { scan_out_declarations, evaluate } from "./sec-4.1.1";
 import { list_of_unassigned, is_compound_function } from "./sec-4.1.3";
 
 function setup_environment() {
@@ -81,7 +81,7 @@ function driver_loop(env) {
     display("evaluator terminated");
   } else {
     const program = parse(input);
-    const locals = scan_out_declaration(program);
+    const locals = scan_out_declarations(program);
     const unassigneds = list_of_unassigned(locals);
     const program_env = extend_environment(locals, unassigneds, env);
     const output = evaluate(program, program_env);
