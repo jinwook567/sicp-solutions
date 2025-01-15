@@ -37,7 +37,7 @@ export function append(list1, list2) {
 
 export function list(...args) {
   const [first, ...rest] = args;
-  return args.length === 0 ? null : pair(first, list(rest));
+  return args.length === 0 ? null : pair(first, list(...rest));
 }
 
 export function every(predicate, items) {
