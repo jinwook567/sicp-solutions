@@ -37,6 +37,11 @@ verify 함수를 사용하는 편이 더 좋아보인다.
 3. 성능상 이점이 있다. 매번 컴포넌트에 오류가 있는지 없는지 판별할 필요가 없다.
 */
 
+/**
+ * 평가기를 수정하는 편이 응집도 측면에서는 더 우월하다.
+ * 하나의 component에 대해서 수정을 할 때 verify 방식은 2곳에서 수정이 필요하다.
+ */
+
 // b
 function verify_lamda_expression(component) {
   return are_parameters_unique(
