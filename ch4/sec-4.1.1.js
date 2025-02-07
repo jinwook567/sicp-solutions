@@ -19,6 +19,7 @@ import {
   is_literal,
   literal_value,
   is_name,
+  declaration_symbol,
 } from "./sec-4.1.2.js";
 import {
   is_sequence,
@@ -28,6 +29,7 @@ import {
   make_return_value,
   is_return_value,
   return_value_content,
+  list_of_unassigned,
 } from "./sec-4.1.3.js";
 
 export function evaluate(component, env) {
